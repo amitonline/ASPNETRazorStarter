@@ -1,0 +1,36 @@
+﻿@page
+@model TestRazor.Pages.admin.DashboardModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Admin Dashboard";
+
+}
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h3 class="panel-title">ADMINISTRATION DASHBOARD</h3>
+                </div>
+                <div class="panel-body ">
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3 text-center">
+                            <button type=button onclick="window.location='/admin/Logout';"
+                                    class="btn btn-sm btn-secondary mr-2">
+                                Logout
+                            </button>
+                            <button type=button onclick="window.location='/admin/Emails';"
+                                    class="btn btn-sm btn-secondary">
+                                Email Ids
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div><br>
+
+        </div> <!--col-md-6-->
+    </div> <!--row-->
+</div> <!--container-->

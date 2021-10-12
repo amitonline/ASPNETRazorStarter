@@ -1,0 +1,36 @@
+﻿@page
+@model VerifyModel
+
+@{
+    ViewData["Title"] = "Signup Verification";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-3">
+    <div class="col-sm-12 text-center">
+        <h2>Verify Signup</h2>
+    </div>
+    <div class="clearfix"></div><br>
+                                <div class="col-sm-12">
+                                    @if (ViewData["error"] != null && (string)ViewData["error"] != "")
+                                    {
+                                        <div class="alert alert-danger text-center">
+                                            <b>@ViewData["error"]</b>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="alert alert-success text-center">
+                                            <b>@ViewData["msg"]</b>
+                                        </div>
+                                    }
+                                    
+                                </div>
+
+
+    </div> <!--container-->
+    @section ExtraScripts{
+        <script src="~/js/verify-signup.js"></script>
+    }
+
+
